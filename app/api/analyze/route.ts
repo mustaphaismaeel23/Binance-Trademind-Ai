@@ -8,7 +8,10 @@ const bodySchema = z.object({
 
 export async function POST(request: Request) {
   try {
-    const body = bodySchema.parse(await request.json());
+    const rawBody = await request.json().catch(() => ({}));
+    const body = bodySchema.parse({
+      query: rawBody?.query ?? "Analyze BTC for a short-term trade and identify the major risks.",
+    });
     const result = await runTradeMindAnalysis(body.query);
     const status = result.error ? 500 : 200;
     return NextResponse.json(result, { status });

@@ -20,23 +20,5 @@
         }
       }
     }
-  },
-  "endpoints": [
-    {
-      "name": "analyze",
-      "description": "Analyze a cryptocurrency research query using live Binance market data.",
-      "method": "POST",
-      "url": "https://binance-trademind-ai-olive.vercel.app/api/analyze",
-      "input": {
-        "type": "object",
-        "required": ["query"],
-        "properties": {
-          "query": {
-            "type": "string",
-            "description": "A natural-language crypto market research question."
-          }
-        }
-      }
-    }
-  ]
+  }
 }

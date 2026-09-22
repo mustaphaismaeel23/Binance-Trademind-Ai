@@ -1,0 +1,24 @@
+{
+  "name": "TradeMind AI",
+  "version": "1.0.0",
+  "description": "Transparent Binance crypto market research, market analysis, and risk intelligence.",
+  "homepage": "https://binance-trademind-ai-olive.vercel.app/",
+  "endpoints": [
+    {
+      "name": "analyze",
+      "description": "Analyze a cryptocurrency research query using live Binance market data.",
+      "method": "POST",
+      "url": "https://binance-trademind-ai-olive.vercel.app/api/analyze",
+      "input": {
+        "type": "object",
+        "required": ["query"],
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "A natural-language crypto market research question."
+          }
+        }
+      }
+    }
+  ]
+}

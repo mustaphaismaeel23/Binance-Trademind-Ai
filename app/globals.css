@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0e11;
+  --card: #161a1e;
+  --muted: #929aa5;
+  --border: #2b3138;
+  --text: #f0f2f4;
+  --gold: #f0b90b;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(240, 185, 11, .035), transparent 34%),
+    radial-gradient(circle at 85% 5%, rgba(39, 48, 58, .42), transparent 25rem),
+    var(--background);
+  font-family: "Plus Jakarta Sans", "Trebuchet MS", sans-serif;
+}
+button, input { font: inherit; }
+button { cursor: pointer; }
